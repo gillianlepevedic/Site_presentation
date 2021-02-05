@@ -49,7 +49,7 @@ article{
 }
 
 article > h2, article > h4{
-	color: #2b78e4;
+	color: #365623;
 	text-transform: uppercase;
 	font-weight: 500;
 	font-size: 20px;
@@ -66,14 +66,14 @@ article > h3{
 article > a {
 	display: inline-block;
   	background: none;
-  	color: #2b78e4;
+  	color: #365623;
   	text-align: center;
   	font-size: 20px;
   	padding: 12px 36px;
   	font-weight: 400;
   	border-radius: 6px;
   	margin: 50px 30px 0 0;
-  	border: 2px solid #2b78e4;
+  	border: 2px solid #365623;
   	transition: all 0.3s ease;
   	text-decoration: none;
   	outline: 0;
@@ -81,7 +81,7 @@ article > a {
 
 article > a:hover{
 	color: #fff;
-    background: #2b78e4;
+    background: #365623;
 }
 
 article > p {
@@ -103,8 +103,9 @@ img{
 figure{
 	margin: 25px;
 }
+
 /* ----- CSS Responsive Général ----- */
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 1000px){
 
 	article{
 		margin: auto 10px;
@@ -202,20 +203,20 @@ nav h2{
 	font-weight: bold;
 }
 nav > img{/* Définition de la taille du logo du header */
-	width: 150px;
+	width: 80px;
 }
 
 .active{
-	color: #2b78e4;
+	color: #365623;
 	background: none;
   	border-radius: 6px;
-  	border: 2px solid #2b78e4;
+  	border: 2px solid #365623;
 	transition: all .3s ease-in-out;
 }
 
 .active:hover{
 	color: #fff;
-    background: #2b78e4;
+    background: #365623;
 }
 
 nav > ul{
@@ -227,7 +228,7 @@ nav > ul > li{
 }
 
 nav > ul > li > a{
-	color: #2b78e4;
+	color: #365623;
 	font-size: 18px;
 	padding: 6px 20px;
 	font-weight: 500;
@@ -243,11 +244,11 @@ nav > ul > li > a{
 
 nav > ul > li > a:hover{
   	background: none;
-  	border: 2px solid #2b78e4;
+  	border: 2px solid #365623;
 }
 
 nav > h2{
-	color: #2b78e4;
+	color: #365623;
 }
 
 #nav-toggle{
@@ -262,7 +263,7 @@ nav .icon-burger{
 	height: 25px;
 }
 /* ------ Header Responsive ------ */
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 1000px){
 
 	nav > ul > li > a{
 		font-size: 17px;
@@ -270,7 +271,7 @@ nav .icon-burger{
 		margin: auto 5px;
 	}
 }
-@media only screen and (max-width: 880px){ /* Menu Burger à partir de 880px */
+@media only screen and (max-width: 800px){ /* Menu Burger à partir de 880px */
 	nav > ul > li > a{
 		border: 2px solid #F3F6FA;
 		font-size: 25px;
@@ -303,7 +304,7 @@ nav .icon-burger{
 	}
 	nav .icon-burger > svg{ /* Animation de l'icon svg du menu burger*/
 		transition: ease transform .2s;
-		fill: #2b78e4;
+		fill: #365623;
 	}
 	nav .icon-burger > svg:hover{
 		fill :#4d62a6;
@@ -412,7 +413,7 @@ footer > aside:last-of-type{ /*Selector pour le dernier aside du footer (Chevron
 	width: 5%;
 }
 /* ------ Footer Responsive ------ */
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 1000px){
 
 	footer > aside > img{
 		width: 100px;
@@ -437,21 +438,21 @@ footer > aside:last-of-type{ /*Selector pour le dernier aside du footer (Chevron
 .banniere-inside a{
 	display: inline-block;
 	color : white;
-	background: #2b78e4;
+	background: #365623;
   	font-size: 20px;
   	padding: 12px 36px;
   	text-align: center;
   	font-weight: 400;
   	border-radius: 6px;
   	margin-top: 100px;
-  	border: 2px solid #2b78e4;
+  	border: 2px solid #365623;
   	transition: all 0.3s ease;
   	text-decoration: none;
   	outline: 0;
 }
 
 .banniere-inside a:hover{
-	color: #2b78e4;
+	color: #365623;
 	background: none;
 }
 
@@ -464,7 +465,7 @@ footer > aside:last-of-type{ /*Selector pour le dernier aside du footer (Chevron
 	margin-bottom: 30px;
 	color: #373F41;
 	font-weight: 500;
-	font-size: 40px;
+	font-size: 70px;
 	margin: 0 50px;
 	font-family: 'Montserrat', sans-serif;
 }
@@ -478,11 +479,11 @@ footer > aside:last-of-type{ /*Selector pour le dernier aside du footer (Chevron
 	font-family: 'Montserrat', sans-serif;
 }
 /* ----- CSS Responsive de index.html ----- */
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 1000px){
 
 	.banniere-inside h1{
 		margin-bottom: 30px;
-		font-size: 30px;
+		font-size: 60px;
 	}
 
 	.banniere-inside h2{
@@ -503,7 +504,7 @@ footer > aside:last-of-type{ /*Selector pour le dernier aside du footer (Chevron
 
 	.banniere-inside h1{
 		margin-bottom: 20px;
-		font-size: 25px;
+		font-size: 50px;
 	}
 
 	.banniere-inside h2{
@@ -523,7 +524,7 @@ footer > aside:last-of-type{ /*Selector pour le dernier aside du footer (Chevron
 /* ----- CSS spécifique à particulier.html ----- */
 img[alt="img-produit"]{
 	width: 250px;
-	height: 150px;
+	/*height: 150px;*/
 }
 .container-produit{
 	padding: 30px 80px;
@@ -537,7 +538,7 @@ img[alt="img-produit"]{
 	font-size: 18px;
 	padding: 12px 18px;
 }
-@media only screen and (max-width: 1280px){
+@media only screen and (max-width: 1000px){
 
 	.container-produit{
 		padding: 30px 25px;
@@ -626,81 +627,4 @@ figcaption{
 /* ----- Fin du CSS Responsive de about.html ----- */
 /* ----- Fin du CSS spécifique à about.html ----- */
 
-/* ----- CSS spécifique à contact.html ----- */
-form{
-	box-shadow: 0px 0px 10px 2px grey;
-	padding: 40px;
-	width: 60%;
-	margin: 0 auto;
-	margin-top: 50px;
-	border-radius: 6px;
-	background-color: white;
-}
-form > div{
-	position: relative;
-	width: 100%;
-}
-form > h4{
-	font-size: 20px;
-	font-weight: 500;
-	color: #2b78e4;
-	text-transform: uppercase;
-}
-form > div > input, 
-form > div > textarea{
-	width: 100%;
-	padding: 5px 0;
-	margin: 20px 0;
-	font-size: 20px;
-	border: none;
-	border-bottom: solid 3px #4d62a6;
-	outline: none;
-	resize: none;
-	font-family: SFPRO;
-}
-form > div > span{
-	position: absolute;/*Faire en sorte que le span se positionne en dessus de l'inputBox*/
-	left: 0;
-	padding: 5px 0;
-	margin: 20px 0;
-	font-size: 20px;
-	pointer-events: none;
-	transition: all .5s ease;
-	color: #4d62a6;
-}
-form > div > input:focus ~ span, 
-form > div > input:valid ~ span,
-form > div > textarea:focus ~ span, 
-form > div > textarea:valid ~ span{
-	transform: translateY(-30px);/*Décale de 30px vers le haut le texte qui se situe dans les inputBox quand on écrit ou que la valeur est valide*/
-	font-size: 17px;
-	color: #2b78e4;
-}
-form > div:last-of-type{
-	text-align: center;
-}
-form > div > input[type="submit"]{
-	width: 200px;
-	display: inline-block;
-  	background: none;
-  	color: #2b78e4;
-  	font-size: 20px;
-  	padding: 12px 36px;
-  	font-weight: 400;
-  	border-radius: 6px;
-  	margin: 50px 30px 0 0;
-  	border: 2px solid #2b78e4;
-  	transition: all 0.3s ease;
-}
-form > div > input[type="submit"]:hover{
-	color: #fff;
-	background-color: #2b78e4;
-}
-/* ----- CSS Responsive de contact.html*/
-@media only screen and (max-width: 800px){
-	form{
-		width: auto;/*Le form va prendre le max de place niveau largueur en version mobile*/
-	}
-}
-/* ----- Fin du CSS Responsive de contact.html*/
 /* ----- Fin du CSS spécifique à contact.html ----- */
