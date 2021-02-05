@@ -95,7 +95,7 @@ article > p {
 }
 
 .color2{
-	background-color: #F3F6FA;
+	background-color: #f2f2f2;
 }
 img{
 	border-radius: 6px;
@@ -203,7 +203,7 @@ nav h2{
 	font-weight: bold;
 }
 nav > img{/* Définition de la taille du logo du header */
-	width: 80px;
+	width: 50px;
 }
 
 .active{
@@ -523,8 +523,8 @@ footer > aside:last-of-type{ /*Selector pour le dernier aside du footer (Chevron
 
 /* ----- CSS spécifique à particulier.html ----- */
 img[alt="img-produit"]{
-	width: 250px;
-	/*height: 150px;*/
+	width: 150px;
+	height: auto;
 }
 .container-produit{
 	padding: 30px 80px;
@@ -532,6 +532,7 @@ img[alt="img-produit"]{
 .container-produit > article> h3{
 	font-size: 30px;
 	margin: 0;
+	color :#365623;
 }
 .container-produit > article> a{
 	margin: 0;
@@ -590,8 +591,9 @@ figcaption{
 }
 
 .frame-left figure > img, .frame-right figure > img{
-	width: 100%;
-  	height: auto;
+	width: 50%;
+	  height: auto;
+	  padding: 20px;
   	transition: all 0.3s ease; 
   	border-radius: 0;/*Annule le border-radius appliqué aux autres img*/
 }
