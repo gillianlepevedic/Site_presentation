@@ -1,0 +1,706 @@
+@font-face {
+font-family: "SFPRO";
+src: url("fonts/SFProDisplay-Regular.woff") format("woff");
+}
+/*
+--- Palette de couleur ---
+Bleu 1 : #2b78e4
+Bleu 2 : #4d62a6
+Footer: #243238
+Fonts colors : #373F41, #737B7D
+*/
+
+/* ----- CSS Général ----- */
+html {
+	font-family: SFPRO;
+  	scroll-behavior: smooth;
+  	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #F3F6FA;
+}
+		
+h1, h2, h3, h4 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+h3{
+	font-weight: 600;
+}
+
+main {
+	margin: 0;
+	padding: 0;
+	background-color: white;
+}
+
+section {
+	display: inline-flex;
+	padding: 100px 80px;
+	align-content: center;
+	justify-content: space-around;
+}
+
+article{
+	margin: auto 25px;
+}
+
+article > h2, article > h4{
+	color: #2b78e4;
+	text-transform: uppercase;
+	font-weight: 500;
+	font-size: 20px;
+	margin: 5px 0;
+}
+
+article > h3{
+	color:#373F41;
+	font-size: 40px;
+	font-weight: normal;
+	margin-top: 10px; 
+}
+
+article > a {
+	display: inline-block;
+  	background: none;
+  	color: #2b78e4;
+  	text-align: center;
+  	font-size: 20px;
+  	padding: 12px 36px;
+  	font-weight: 400;
+  	border-radius: 6px;
+  	margin: 50px 30px 0 0;
+  	border: 2px solid #2b78e4;
+  	transition: all 0.3s ease;
+  	text-decoration: none;
+  	outline: 0;
+}
+
+article > a:hover{
+	color: #fff;
+    background: #2b78e4;
+}
+
+article > p {
+	color: #737B7D;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.color1{
+	background-color: #fff;
+}
+
+.color2{
+	background-color: #F3F6FA;
+}
+img{
+	border-radius: 6px;
+}
+figure{
+	margin: 25px;
+}
+/* ----- CSS Responsive Général ----- */
+@media only screen and (max-width: 1280px){
+
+	article{
+		margin: auto 10px;
+	}
+
+	article > h2, article > h4{
+		font-size: 17px;
+		margin-bottom: 2px;
+	}
+
+	article > h3{
+		font-size: 28px;
+	}
+
+	article > p {
+    	margin-top: 25px;
+    	font-size: 16px;
+	}
+
+	article > a{
+		margin: 25px 30px 0 0;
+		padding: 10px 30px;
+		font-size: 18px
+	}
+	section{
+		padding: 50px 25px;/*Réduit les marges internes des sections en version mobile*/
+	}
+	img{
+		width: 100%;
+	}
+	figure{
+		min-width: 50%;
+		align-self: center;
+	}
+}
+
+@media only screen and (max-width: 800px){
+
+	article > h2, article > h4{
+		font-size: 20px;
+		margin-bottom: 20px;
+		text-align: left;
+	}
+
+	article > h3{
+		font-size: 35px;
+		margin: 0;
+	}
+
+	article > p {
+    	margin-top: 25px;
+    	margin-right: 0;
+    	font-size: 16px;
+	}
+
+	article > a{
+		margin: 25px 30px 0 0;
+		padding: 10px 30px;
+		font-size: 18px;
+	}
+	article{
+		text-align: center;
+	}
+	section{
+		padding: 50px 20px;/*Réduit les marges internes des sections en version mobile*/
+	}
+	figure{
+		display: none;
+	}
+}
+/* ----- Fin CSS Responsive Général ----- */
+/* ----- Fin CSS Général ----- */
+/* ------ Header Section ------ */
+header{
+	position: sticky;
+	top: 0%;
+ 	width: 100%;
+	padding: 0;
+	height: 80px;
+  	background-color: #fff;
+  	box-shadow: 0px 0px 5px 1px grey;
+  	z-index: 100;
+}
+
+nav{
+	margin: auto;
+	padding: 0 30px;
+	display: flex;
+	height: 80px;
+	align-items: center;
+	justify-content: space-between;
+}
+
+nav h2{
+	font-weight: bold;
+}
+nav > img{/* Définition de la taille du logo du header */
+	width: 150px;
+}
+
+.active{
+	color: #2b78e4;
+	background: none;
+  	border-radius: 6px;
+  	border: 2px solid #2b78e4;
+	transition: all .3s ease-in-out;
+}
+
+.active:hover{
+	color: #fff;
+    background: #2b78e4;
+}
+
+nav > ul{
+	display: inline-flex;
+}
+
+nav > ul > li{
+	list-style: none;
+}
+
+nav > ul > li > a{
+	color: #2b78e4;
+	font-size: 18px;
+	padding: 6px 20px;
+	font-weight: 500;
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 1px;
+	transition: all .3s ease-in-out;
+	border-radius: 6px;
+  	border: 2px solid #fff;
+	outline: 0;
+	margin: auto 10px;
+}
+
+nav > ul > li > a:hover{
+  	background: none;
+  	border: 2px solid #2b78e4;
+}
+
+nav > h2{
+	color: #2b78e4;
+}
+
+#nav-toggle{
+	display: none;/* on cache la checkbox car on a pas le besoin de la voir juste de sa fonction on/off*/
+}
+nav .icon-burger{
+	display: none;/*On cache l'icon burger en mode desktop*/
+	position: absolute;
+	right: 5%;
+	top: 50%;
+	transform: translateY(-50%);/*On change le point de référence de l'img en son milieu*/
+	height: 25px;
+}
+/* ------ Header Responsive ------ */
+@media only screen and (max-width: 1280px){
+
+	nav > ul > li > a{
+		font-size: 17px;
+		padding: 6px 6px;
+		margin: auto 5px;
+	}
+}
+@media only screen and (max-width: 880px){ /* Menu Burger à partir de 880px */
+	nav > ul > li > a{
+		border: 2px solid #F3F6FA;
+		font-size: 25px;
+		padding: 6px 20px;
+		letter-spacing: 1px;
+		margin: auto 15px;
+	}
+	nav > ul{/* Changement de toute la disposition de ul pour la mettre en menu déroulent*/
+		float: none;
+		position: fixed;
+		z-index: -5;
+		background-color: #F3F6FA;
+		right: 0;
+		left: 100%;
+		top: 80px;/*on le colle au header (top : 0 - la taille du header)*/
+		bottom: 100%;
+		height: auto;
+		width: auto;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		flex-direction: column;
+		justify-content: space-around;
+		align-items: center;
+		transition: ease all .5s;
+		z-index: -5;
+	}
+	nav .icon-burger{
+		display: block;/* L'icon svg du menu burger apparait*/
+	}
+	nav .icon-burger > svg{ /* Animation de l'icon svg du menu burger*/
+		transition: ease transform .2s;
+		fill: #2b78e4;
+	}
+	nav .icon-burger > svg:hover{
+		fill :#4d62a6;
+		transform: scale(1.2);
+	}
+	nav .icon-burger > svg:last-of-type{
+		display: none;
+	}
+	nav > input:checked ~ ul{
+		bottom: 0; /* Déroulement du menu quand l'input est check*/
+		left: 0;
+	}
+	nav > input:checked ~ label> svg:last-of-type{
+		display: block; /* Affiche la croix*/
+	}
+	nav > input:checked ~ label> svg{
+		display: none; /* Cache les bars*/
+	}
+}
+/* ------ Footer Section ------ */
+footer{
+  	background-color: #243238;
+  	width: 100%;
+  	padding: 20px 0;
+  	font-size: 14px;
+  	font-weight: 400;
+  	font-style: normal;
+  	line-height: 1.75em;
+ 	color: #8e8e8e;
+ 	display: inline-flex;
+  	align-items: center;
+	justify-content: space-between;
+}
+
+footer > aside{
+	margin: 0 2%;
+}
+address > h1{
+	font-size: 15px;
+	font-weight: 500;
+	font-style: normal;
+	line-height: 1.75em;
+	margin-bottom: 2px;
+}
+
+footer > aside > img{/* Définition de la taille du logo du footer */
+	width: 150px;
+}
+
+footer > aside > p, address > p{
+	margin: 0;
+	font-style: normal;
+	font-size: 16px;
+}
+
+address{
+	float: left;
+}
+
+address > a{
+ 	color: #8e8e8e;
+	font-size: 16px;
+	font-weight: 500;
+	text-decoration: none;
+	font-style: normal;
+	letter-spacing: 1px;
+	transition: all .2s ease-in-out;
+	outline: 0;
+}
+
+address > a:hover{
+	color: #4d62a6;
+}
+
+footer > aside > a{
+ 	color: #8e8e8e;	
+ 	font-size: 16px;
+	text-decoration: none;
+	outline: 0;
+	transition: all .2s ease-in-out;
+}
+
+footer > aside> a:hover{
+	color: #4d62a6;
+}
+
+footer > aside> ul{
+	list-style-type: none;
+	padding: 0;
+}
+
+footer >aside> ul > li> a{
+	text-decoration: none;
+	font-size: 16px;
+	outline: 0;
+	transition: all .2s ease-in-out;
+	color: #8e8e8e;
+}
+
+footer >aside> ul > li> a:hover{
+	color: #4d62a6;
+}
+
+footer > aside:last-of-type{ /*Selector pour le dernier aside du footer (Chevron) */
+	text-align: center;
+	width: 5%;
+}
+/* ------ Footer Responsive ------ */
+@media only screen and (max-width: 1280px){
+
+	footer > aside > img{
+		width: 100px;
+	}
+	footer{
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
+/*Fin CSS Header Footer*/
+
+/* ----- CSS spécifique à index.html ----- */
+.banniere {
+	background: url(Images/Background3.jpg) no-repeat center center fixed;
+	width: 100%;
+	height: 90vh;
+  	text-align: center;
+  	display: flex;
+  	padding: 0;
+}
+
+.banniere-inside a{
+	display: inline-block;
+	color : white;
+	background: #2b78e4;
+  	font-size: 20px;
+  	padding: 12px 36px;
+  	text-align: center;
+  	font-weight: 400;
+  	border-radius: 6px;
+  	margin-top: 100px;
+  	border: 2px solid #2b78e4;
+  	transition: all 0.3s ease;
+  	text-decoration: none;
+  	outline: 0;
+}
+
+.banniere-inside a:hover{
+	color: #2b78e4;
+	background: none;
+}
+
+.banniere-inside{
+	margin:auto;
+	text-align: center;
+}
+
+.banniere-inside h1{
+	margin-bottom: 30px;
+	color: #373F41;
+	font-weight: 500;
+	font-size: 40px;
+	margin: 0 50px;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.banniere-inside h2{
+	color: #737B7D;
+	font-weight: normal;
+	font-size: 20px;
+	margin: 0 50px;
+	margin-top: 20px;
+	font-family: 'Montserrat', sans-serif;
+}
+/* ----- CSS Responsive de index.html ----- */
+@media only screen and (max-width: 1280px){
+
+	.banniere-inside h1{
+		margin-bottom: 30px;
+		font-size: 30px;
+	}
+
+	.banniere-inside h2{
+		font-size: 18px;
+		margin-top: 20px;
+	}
+
+	.banniere-inside a{
+  		margin-top: 75px;
+	}
+}
+
+@media only screen and (max-width: 800px){
+
+	.banniere {
+		height: 80vh;
+	}
+
+	.banniere-inside h1{
+		margin-bottom: 20px;
+		font-size: 25px;
+	}
+
+	.banniere-inside h2{
+		font-size: 15px;
+		margin-top: 15px;
+	}
+
+	.banniere-inside a{
+  		margin-top: 40px;
+  		padding: 10px 30px;
+  		font-size: 17px;
+	}
+}
+/* ----- Fin du CSS Responsive de index.html ----- */
+/* ----- Fin du CSS spécifique à index.html ----- */
+
+/* ----- CSS spécifique à particulier.html ----- */
+img[alt="img-produit"]{
+	width: 250px;
+	height: 150px;
+}
+.container-produit{
+	padding: 30px 80px;
+}
+.container-produit > article> h3{
+	font-size: 30px;
+	margin: 0;
+}
+.container-produit > article> a{
+	margin: 0;
+	font-size: 18px;
+	padding: 12px 18px;
+}
+@media only screen and (max-width: 1280px){
+
+	.container-produit{
+		padding: 30px 25px;
+	}
+	.container-produit figure{
+		min-width: auto;
+	}
+}
+/* ----- Fin du CSS spécifique à particulier.html ----- */
+
+/* ----- CSS spécifique à about.html ----- */
+article > section{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0;
+	align-content: stretch;
+	justify-content: space-around;
+	width: 100%;
+}
+
+article > section > article{
+	width: 40%;
+	text-align: center;
+	margin: 25px 15px;
+	margin-bottom: 40px;
+}
+
+article > section> article > p{
+	margin: 0;
+	text-align: center;
+}
+
+article > section> article > h4{
+	text-align: center;
+	padding-top: 20px;
+}
+
+figcaption{
+	text-align: center;
+	letter-spacing: 1px;
+	color: #737B7D;
+	font-family: SFPRO;
+}
+
+.frame-left, .frame-right{
+	box-shadow: 0px 0px 10px 2px grey;
+	margin-top: 0;
+	background-color: #fff;
+}
+
+.frame-left figure > img, .frame-right figure > img{
+	width: 100%;
+  	height: auto;
+  	transition: all 0.3s ease; 
+  	border-radius: 0;/*Annule le border-radius appliqué aux autres img*/
+}
+
+.frame-left figure > img:hover, .frame-right figure > img:hover{
+	transform: scale(1.1);
+}
+
+.frame-right figure, .frame-left figure{
+	overflow: hidden;/*Faire en sorte que les img ne dépassent pas du frame lors du scale*/
+	margin: 0;
+}
+
+.frame-left p, .frame-right p{
+	margin: 40px;
+}
+
+.frame-left a, .frame-right a{
+	margin: 0 0 30px 0;
+	text-align: center;
+}
+/* ----- CSS Responsive de about.html ----- */
+@media only screen and (max-width: 800px){
+
+	.frame-left ,.frame-right{
+		margin-top: 25px;/*Faire en sorte que les Frames ne touchent pas le h3*/
+		width: 100%;/*Force les frames à prendre tout la largueur pour le flex-wrap*/
+	}
+	.frame-right figure, .frame-left figure{
+		display: block;/*Affiche l'image de chaque frame*/
+	}
+}
+/* ----- Fin du CSS Responsive de about.html ----- */
+/* ----- Fin du CSS spécifique à about.html ----- */
+
+/* ----- CSS spécifique à contact.html ----- */
+form{
+	box-shadow: 0px 0px 10px 2px grey;
+	padding: 40px;
+	width: 60%;
+	margin: 0 auto;
+	margin-top: 50px;
+	border-radius: 6px;
+	background-color: white;
+}
+form > div{
+	position: relative;
+	width: 100%;
+}
+form > h4{
+	font-size: 20px;
+	font-weight: 500;
+	color: #2b78e4;
+	text-transform: uppercase;
+}
+form > div > input, 
+form > div > textarea{
+	width: 100%;
+	padding: 5px 0;
+	margin: 20px 0;
+	font-size: 20px;
+	border: none;
+	border-bottom: solid 3px #4d62a6;
+	outline: none;
+	resize: none;
+	font-family: SFPRO;
+}
+form > div > span{
+	position: absolute;/*Faire en sorte que le span se positionne en dessus de l'inputBox*/
+	left: 0;
+	padding: 5px 0;
+	margin: 20px 0;
+	font-size: 20px;
+	pointer-events: none;
+	transition: all .5s ease;
+	color: #4d62a6;
+}
+form > div > input:focus ~ span, 
+form > div > input:valid ~ span,
+form > div > textarea:focus ~ span, 
+form > div > textarea:valid ~ span{
+	transform: translateY(-30px);/*Décale de 30px vers le haut le texte qui se situe dans les inputBox quand on écrit ou que la valeur est valide*/
+	font-size: 17px;
+	color: #2b78e4;
+}
+form > div:last-of-type{
+	text-align: center;
+}
+form > div > input[type="submit"]{
+	width: 200px;
+	display: inline-block;
+  	background: none;
+  	color: #2b78e4;
+  	font-size: 20px;
+  	padding: 12px 36px;
+  	font-weight: 400;
+  	border-radius: 6px;
+  	margin: 50px 30px 0 0;
+  	border: 2px solid #2b78e4;
+  	transition: all 0.3s ease;
+}
+form > div > input[type="submit"]:hover{
+	color: #fff;
+	background-color: #2b78e4;
+}
+/* ----- CSS Responsive de contact.html*/
+@media only screen and (max-width: 800px){
+	form{
+		width: auto;/*Le form va prendre le max de place niveau largueur en version mobile*/
+	}
+}
+/* ----- Fin du CSS Responsive de contact.html*/
+/* ----- Fin du CSS spécifique à contact.html ----- */
