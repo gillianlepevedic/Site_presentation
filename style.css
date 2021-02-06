@@ -2,13 +2,7 @@
 font-family: "SFPRO";
 src: url("fonts/SFProDisplay-Regular.woff") format("woff");
 }
-/*
---- Palette de couleur ---
-Bleu 1 : #2b78e4
-Bleu 2 : #4d62a6
-Footer: #243238
-Fonts colors : #373F41, #737B7D
-*/
+
 
 /* ----- CSS Général ----- */
 html {
@@ -29,6 +23,10 @@ h1, h2, h3, h4 {
 
 h3{
 	font-weight: 600;
+}
+
+dic > h2{
+	font-size: 20px;
 }
 
 main {
@@ -88,6 +86,7 @@ article > p {
 	color: #737B7D;
 	margin-top: 20px;
 	margin-right: 20px;
+	font-size: 20px;
 }
 
 .color1{
@@ -627,6 +626,14 @@ figcaption{
 	.frame-right figure, .frame-left figure{
 		display: block;/*Affiche l'image de chaque frame*/
 	}
+
+	article > section > article{
+		width: 100%;
+		text-align: center;
+		margin: 25px 15px;
+		margin-bottom: 40px;
+	}
+	
 }
 /* ----- Fin du CSS Responsive de about.html ----- */
 /* ----- Fin du CSS spécifique à about.html ----- */
