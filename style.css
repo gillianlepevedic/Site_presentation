@@ -528,7 +528,7 @@ footer > aside:last-of-type{ /*Selector pour le dernier aside du footer (Chevron
 /* ----- Fin du CSS spécifique à index.html ----- */
 
 /* ----- CSS spécifique à particulier.html ----- */
-img[alt="img-produit"]{
+img[alt="logo"]{
 	width: 150px;
 	height: auto;
 }
