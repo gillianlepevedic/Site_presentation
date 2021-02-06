@@ -417,13 +417,16 @@ footer > aside:last-of-type{ /*Selector pour le dernier aside du footer (Chevron
 @media only screen and (max-width: 1000px){
 
 	footer > aside {
-		width: 100%;;
+		/*width: 100%;*/
+		text-align: center;
+		align-items: center;
 	}
 	footer{
 		display: flex;
 		flex-direction: column;
-		/*flex-wrap: wrap;
-		justify-content: space-around;*/
+
+		flex-wrap: wrap;
+		justify-content: space-around;
 	}
 }
 /*Fin CSS Header Footer*/
