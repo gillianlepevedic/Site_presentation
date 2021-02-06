@@ -416,12 +416,14 @@ footer > aside:last-of-type{ /*Selector pour le dernier aside du footer (Chevron
 /* ------ Footer Responsive ------ */
 @media only screen and (max-width: 1000px){
 
-	footer > aside > img{
-		width: 100px;
+	footer > aside {
+		width: 100%;;
 	}
 	footer{
-		flex-wrap: wrap;
-		justify-content: space-around;
+		display: flex;
+		flex-direction: column;
+		/*flex-wrap: wrap;
+		justify-content: space-around;*/
 	}
 }
 /*Fin CSS Header Footer*/
